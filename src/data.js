@@ -32,6 +32,6 @@ export const footerData = {
     { ariaLabel: 'Mail', icon: 'tabler:at', href: 'mailto:simonguillaume@rocketmail.com' },
   ],
   footNote: `
-    Made by <a class="text-green-600 hover:underline dark:text-gray-200" href="https://github.com/adrsimon"> Adrien Simon</a>
+    Fait par <a class="text-green-600 hover:underline dark:text-gray-200" href="https://github.com/adrsimon">Adrien Simon</a> à partir d'<a class="text-green-600 hover:underline dark:text-gray-200" href="https://astrowind.vercel.app/">Astrowind</a>.
   `,
 };

@@ -1,9 +1,9 @@
 ---
-title: 'Terms and Conditions'
+title: "Conditions Générales d'utilisation"
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: 04 Juin 2023
+_Dernière mise à jour_: 04 Juin 2023
 
 Veuillez lire attentivement ces conditions avant d'utiliser notre service.
 
