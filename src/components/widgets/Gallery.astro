@@ -1,0 +1,47 @@
+---
+import {Picture} from "@astrojs/image/components";
+export interface Props {
+  title?: string
+  subtitle?: string
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  items = []
+} = Astro.props
+
+---
+<section class="scroll-mt-16" id="gallery">
+  <div>
+    {title && (
+      <h2
+        class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+        set:html={title}
+      />
+    )}
+  
+    {subtitle && (
+      <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+    )}
+  </div>
+  
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {
+      items.map((subitems) => (
+        <div class="grid gap-4">
+          {subitems.map((img) => (
+            <div>
+              <Picture
+                class="mx-auto rounded-md w-full"
+                widths={[1000]}
+                loading="eager"
+                {...img}
+              />
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</section>
