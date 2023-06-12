@@ -1,8 +1,15 @@
 ---
 import {Picture} from "@astrojs/image/components";
+
+interface Item {
+  src: string
+  alt?: string
+}
+
 export interface Props {
   title?: string
   subtitle?: string
+  items?: Item[]
 }
 
 const {
@@ -32,12 +39,18 @@ const {
         <div class="grid gap-4">
           {subitems.map((img) => (
             <div>
-              <Picture
-                class="mx-auto rounded-md w-full"
-                widths={[1000]}
-                loading="eager"
-                {...img}
-              />
+              {
+                typeof img.src === 'string' ? (
+                  <p class="text-center text-green-900 dark:text-white text-2xl">{img.src}</p>
+                ) : (
+                  <Picture
+                  class="mx-auto rounded-md w-full"
+                  widths={[1000]}
+                  loading="eager"
+                  {...img}
+                  />
+                )
+              }
             </div>
           ))}
         </div>

@@ -32,8 +32,6 @@ Le site et ses différents services peuvent être interrompus ou suspendus par l
 
 ## Propriété intellectuelle
 
-ARTICLE 6 : Propriété intellectuelle
-
 Les contenus du site Namaste (logos, textes, éléments graphiques, vidéos, etc.) son protégés par le droit d’auteur, en vertu du Code de la propriété intellectuelle. Ce site a été crée en se basant sur le template AstroWind retrouvable ici : https://astrowind.vercel.app/. Toute la mise en page de ce dernier repose sur ce template et la propriété intellectuelle de ce dernier revient à ses créateurs.
 
 L’Utilisateur devra obtenir l’autorisation de l’éditeur du site avant toute reproduction, copie ou publication de ces différents contenus.

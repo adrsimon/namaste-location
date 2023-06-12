@@ -6,9 +6,9 @@ import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Gallery from '~/components/widgets/Gallery.astro'
-import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import {MAILTO} from "../config.mjs";
 
 const meta = {
   title: SITE.title,
@@ -19,7 +19,7 @@ const meta = {
 
 <Layout {meta}>
   <Hero
-    callToAction={{ text: 'Prendre contact', href: 'mailto:simonguillaume@rocketmail.com', icon: 'tabler:at' }}
+    callToAction={{ text: 'Prendre contact', href: MAILTO, icon: 'tabler:at' }}
     callToAction2={{ text: 'En savoir plus', href: '#intro' }}
     image={{ src: import('~/assets/images/hero.png'), alt: 'HeroBanner of Namaste' }}
   >
@@ -29,7 +29,7 @@ const meta = {
 
     <Fragment slot="subtitle">
       <span class="mb-1 font-bold text-green-600">Namaste</span>
-      est un appartement situé en rez de jardin d'une maison, à 10 minutes à pied de la plage, de la piste cyclable et au pied du Semnoz.
+      est un appartement situé en rez de jardin d'une maison, au pied du Semnoz, et à 10 minutes à pied de la plage, de la piste cyclable.
     </Fragment>
   </Hero>
 
@@ -37,8 +37,9 @@ const meta = {
   <Note />
   
   <Fragment>
-    <p class="px-20 pb-20 tracking-tight dark:text-white mt-20">Appartement situé en rez de jardin d'une maison, à 10 minutes à pied de la plage (plage municipale de Sévrier ou Clos Berthet), 
-      de la piste cyclable et au pied du Semnoz. L'appartement est composé de 2 pièces, une chambre avec 2 lits simples et une grande salle à manger, 
+    <p class="px-20 pb-20 tracking-tight dark:text-white mt-20">Appartement situé en rez de jardin d'une maison, au pied du Semnoz, 
+      et à 10 minutes à pied de la plage (plage municipale de Sévrier ou Clos Berthet), 
+      de la piste cyclable. L'appartement est composé de 2 pièces, une chambre avec 2 lits simples et une grande salle à manger, 
       salon avec canapé convertible. Cuisine équipée et salle de bain avec douche à l’italienne. Linge de lit et linge de toilette fournis. 
       Mise à disposition d'un paddle en location et sauna extérieur en surplus.</p>
   </Fragment>
@@ -57,21 +58,21 @@ const meta = {
           alt: ''
         },
         {
-          src: import('~/assets/images/img3.png'),
+          src: import('~/assets/images/img8.png'),
           alt: ''
         },
+        {
+          src: import('~/assets/images/img6.png'),
+          alt: ''
+        }
+      ],
+      [
         {
           src: import('~/assets/images/img4.png'),
           alt: ''
         },
-      ],
-      [
         {
-          src: import('~/assets/images/img6.png'),
-          alt: ''
-        },
-        {
-          src: import('~/assets/images/img8.png'),
+          src: import('~/assets/images/img5.png'),
           alt: ''
         },
         {
@@ -79,21 +80,21 @@ const meta = {
           alt: ''
         },
         {
-          src: import('~/assets/images/img5.png'),
+          src: import('~/assets/images/img10.png'),
           alt: ''
         },
       ],
       [
         {
+          src: import('~/assets/images/img16.png'),
+          alt: ''
+        },
+        {
+          src: import('~/assets/images/img13.png'),
+          alt: ''
+        },
+        {
           src: import('~/assets/images/img9.png'),
-          alt: ''
-        },
-        {
-          src: import('~/assets/images/img15.png'),
-          alt: ''
-        },
-        {
-          src: import('~/assets/images/img11.png'),
           alt: ''
         },
         {
@@ -104,7 +105,7 @@ const meta = {
 
       [
         {
-          src: import('~/assets/images/img13.png'),
+          src: import('~/assets/images/img11.png'),
           alt: ''
         },
         {
@@ -112,11 +113,11 @@ const meta = {
           alt: ''
         },
         {
-          src: import('~/assets/images/img16.png'),
+          src: import('~/assets/images/img15.png'),
           alt: ''
         },
         {
-          src: import('~/assets/images/img10.png'),
+          src: import('~/assets/images/img17.png'),
           alt: ''
         },
       ],
@@ -124,8 +125,7 @@ const meta = {
   />
   
   <Features
-    title="Électro-ménager et Équipements"
-    subtitle="Découvrez ce que propose le logement en termes d'équipements."
+    title="Équipements du logement"
     items={[
       [
         {
@@ -143,7 +143,8 @@ const meta = {
         {
           title: 'Vue sur la montagne',
           description:
-            'A 2 minutes à pied, le Semnoz saura vous conquir en été comme en hiver à travers ses randonnées initiatiques.',
+            'A 2 minutes à pied, le Semnoz saura vous conquérir en été comme en hiver à travers ses randonnées' +
+            ' initiatiques.',
           icon: 'tabler:mountain',
         },
       ],
@@ -151,7 +152,7 @@ const meta = {
         {
           title: 'Sauna privé',
           description:
-            'Sauna accessible à la demande disponible dans le jardin des propriétaires, qui saura vous détendre en été et vous réchauffer en hiver.',
+            'Sauna accessible à la demande disponible, en surplus, dans le jardin des propriétaires, qui saura vous détendre en été et vous réchauffer en hiver.',
           icon: 'tabler:pool',
         },
         {
@@ -184,7 +185,7 @@ const meta = {
   <CallToAction
     callToAction={{
       text: 'Prendre contact',
-      href: 'mailto:simonguillaume@rocketmail.com',
+      href: MAILTO,
       icon: 'tabler:at',
     }}
   >
